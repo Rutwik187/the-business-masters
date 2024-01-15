@@ -1,10 +1,13 @@
+"use client"
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
+import MagazineCarousel from "@/components/magazineCarousel";
 
 export default function Post({ posts }) {
   return (
     <>
+    <MagazineCarousel/>
       {posts && (
         <Container>
           <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
