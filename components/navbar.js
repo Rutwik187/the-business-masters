@@ -9,6 +9,7 @@ import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
+import { img1 } from "./img.png";
 
 export default function Navbar(props) {
   const leftmenu = [
@@ -32,14 +33,14 @@ export default function Navbar(props) {
       href: "/archive"
     },
     {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
+      label: "Contact",
+      href: "/",
+      external: true
+      // badge: "new"
     },
     {
       label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
+      href: "",
       external: true
     }
   ];
@@ -66,7 +67,7 @@ export default function Navbar(props) {
                         <Link
                           href={item.href}
                           key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          className="px-5 py-2 text-lg font-medium text-gray-600 hover:text-red-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
                           {item.label}
@@ -76,37 +77,37 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        {...urlForImage(props.logo)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
+                  <Link href="/" className="w-[18rem] dark:hidden">
+                    {/* {props.logo ? ( */}
+                    <Image
+                      {...urlForImage(props.logo)}
+                      src={img1}
+                      alt="Logo"
+                      priority={true}
+                      sizes="(max-width: 640px) 100vw, 200px"
+                    />
+                    {/* ) : (
+                      <span className="block text-center">Sta</span>
+                    )} */}
                   </Link>
-                  <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        {...urlForImage(props.logoalt)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
+                  <Link
+                    href="/"
+                    className="hidden w-[18rem] dark:block">
+                    {/* {props.logoalt ? ( */}
+                    <Image
+                      {...urlForImage(props.logoalt)}
+                      src={img1}
+                      alt="Logo"
+                      priority={true}
+                      sizes="(max-width: 940px) 100vw, 200px"
+                    />
+                    {/* ) : (
+                      <span className="block text-center">St</span>
+                    )} */}
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none dark:text-gray-300 md:hidden ">
+                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-red-500 focus:outline-none md:hidden dark:text-gray-300 ">
                     <svg
                       className="h-6 w-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -141,12 +142,12 @@ export default function Navbar(props) {
                         <Link
                           href={item.href}
                           key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          className="px-5 py-2 text-lg font-medium text-gray-600 hover:text-red-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
                           <span> {item.label}</span>
                           {item.badge && (
-                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
+                            <span className="ml-2 rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-600 dark:bg-cyan-200 dark:text-red-800 ">
                               {item.badge}
                             </span>
                           )}
@@ -171,7 +172,7 @@ export default function Navbar(props) {
                         <Link
                           href={item.href}
                           key={`${item.label}${index}`}
-                          className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          className="w-full px-5 py-2 text-lg font-medium text-gray-600 hover:text-red-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
                           {item.label}
@@ -198,9 +199,9 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <>
           <Menu.Button
             className={cx(
-              "flex items-center gap-x-1 rounded-md px-5 py-2 text-sm font-medium  outline-none transition-all focus:outline-none focus-visible:text-indigo-500 focus-visible:ring-1 dark:focus-visible:bg-gray-800",
+              "flex items-center gap-x-1 rounded-md px-5 py-2 text-lg font-medium  outline-none transition-all focus:outline-none focus-visible:text-indigo-500 focus-visible:ring-1 dark:focus-visible:bg-gray-800",
               open
-                ? "text-blue-500 hover:text-blue-500"
+                ? "text-red-500 hover:text-red-500"
                 : " text-gray-600 dark:text-gray-400 ",
               mobile ? "w-full px-4 py-2 " : "inline-block px-4 py-2"
             )}>
@@ -227,10 +228,10 @@ const DropdownMenu = ({ menu, items, mobile }) => {
                       <Link
                         href={item?.path ? item.path : "#"}
                         className={cx(
-                          "flex items-center space-x-2 px-5 py-2 text-sm lg:space-x-4",
+                          "flex items-center space-x-2 px-5 py-2 text-lg lg:space-x-4",
                           active
-                            ? "text-blue-500"
-                            : "text-gray-700 hover:text-blue-500 focus:text-blue-500 dark:text-gray-300"
+                            ? "text-red-500"
+                            : "text-gray-700 hover:text-red-500 focus:text-red-500 dark:text-gray-300"
                         )}>
                         <span> {item.title}</span>
                       </Link>
