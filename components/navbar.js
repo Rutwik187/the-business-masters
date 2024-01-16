@@ -9,7 +9,7 @@ import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
-import { img1 } from "./img.png";
+// import { img1 } from "/img/img.png";
 
 export default function Navbar(props) {
   const leftmenu = [
@@ -81,10 +81,11 @@ export default function Navbar(props) {
                     {/* {props.logo ? ( */}
                     <Image
                       {...urlForImage(props.logo)}
-                      src={img1}
+                      src="/img/img.png"
                       alt="Logo"
                       priority={true}
-                      sizes="(max-width: 640px) 100vw, 200px"
+                      width={500}
+                      height={100}
                     />
                     {/* ) : (
                       <span className="block text-center">Sta</span>
@@ -96,10 +97,11 @@ export default function Navbar(props) {
                     {/* {props.logoalt ? ( */}
                     <Image
                       {...urlForImage(props.logoalt)}
-                      src={img1}
+                      src="/img/img.png"
                       alt="Logo"
                       priority={true}
-                      sizes="(max-width: 940px) 100vw, 200px"
+                      width={500}
+                      height={100}
                     />
                     {/* ) : (
                       <span className="block text-center">St</span>
@@ -246,3 +248,115 @@ const DropdownMenu = ({ menu, items, mobile }) => {
     </Menu>
   );
 };
+
+<div class="relative mx-auto max-w-screen-xl p-5 sm:p-10 md:p-16">
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-12">
+    <div class="sm:col-span-5">
+      <a href="#">
+        <div
+          class="overflow-hidden bg-cover text-center"
+          style="min-height: 300px; background-image: url('https://api.time.com/wp-content/uploads/2020/07/never-trumpers-2020-election-01.jpg?quality=85&amp;w=1201&amp;h=676&amp;crop=1')"
+          title="Woman holding a mug"></div>
+      </a>
+      <div class="mt-3 flex flex-col justify-between rounded-b bg-white leading-normal lg:rounded-b-none lg:rounded-r">
+        <div class="">
+          <a
+            href="#"
+            class="text-xs font-medium uppercase text-indigo-600 transition duration-500 ease-in-out hover:text-gray-900">
+            Election
+          </a>
+          <a
+            href="#"
+            class="mb-2 block text-2xl font-bold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+            Revenge of the Never Trumpers
+          </a>
+          <p class="mt-2 text-base text-gray-700">
+            Meet the Republican dissidents fighting to push Donald
+            Trump out of office—and reclaim their party
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-5 sm:col-span-7 lg:grid-cols-3">
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          Trump Steps Back Into Coronavirus Spotlight
+        </a>
+      </div>
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          How Trump's Mistakes Became Biden's Big Breaks
+        </a>
+      </div>
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          Survey: Many Americans 'Dissatisfied' With U.S.
+        </a>
+      </div>
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          How Trump's Mistakes Became Biden's Big Breaks
+        </a>
+      </div>
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          Survey: Many Americans 'Dissatisfied' With U.S.
+        </a>
+      </div>
+      <div class="">
+        <a href="#">
+          <div
+            class="h-40 overflow-hidden bg-cover text-center"
+            style="background-image: url('https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1')"
+            title="Woman holding a mug"></div>
+        </a>
+        <a
+          href="#"
+          class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
+          Trump Steps Back Into Coronavirus Spotlight
+        </a>
+      </div>
+    </div>
+  </div>
+</div>;
