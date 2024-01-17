@@ -32,7 +32,7 @@ function VerticalCards() {
             <a
               href="#"
               className="text-md font-regular font-medium leading-7 tracking-tight text-white hover:underline">
-              Dr. Abdullah Abdullah's Presidential Election Campaign
+              Dr. Abdullah Abdullahs Presidential Election Campaign
             </a>
           </main>
         </div>
@@ -61,7 +61,7 @@ function VerticalCards() {
             <a
               href="#"
               className="text-md font-regular font-medium leading-7 tracking-tight text-white hover:underline">
-              Dr. Abdullah Abdullah's Presidential Election Campaign
+              Dr. Abdullah Abdullahs Presidential Election Campaign
             </a>
           </main>
         </div>
@@ -90,7 +90,7 @@ function VerticalCards() {
             <a
               href="#"
               className="text-md font-regular font-medium leading-7 tracking-tight text-white hover:underline">
-              Dr. Abdullah Abdullah's Presidential Election Campaign
+              Dr. Abdullah Abdullahs Presidential Election Campaign
             </a>
           </main>
         </div>
@@ -119,7 +119,7 @@ function VerticalCards() {
             <a
               href="#"
               className="text-md font-regular font-medium leading-7 tracking-tight text-white hover:underline">
-              Dr. Abdullah Abdullah's Presidential Election Campaign
+              Dr. Abdullah Abdullahs Presidential Election Campaign
             </a>
           </main>
         </div>

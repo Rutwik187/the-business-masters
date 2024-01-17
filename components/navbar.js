@@ -302,7 +302,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <a
           href="#"
           class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
-          How Trump's Mistakes Became Biden's Big Breaks
+          How Trump Mistakes Became Biden Big Breaks
         </a>
       </div>
       <div class="">
@@ -315,7 +315,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <a
           href="#"
           class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
-          Survey: Many Americans 'Dissatisfied' With U.S.
+          Survey: Many Americans Dissatisfied With U.S.
         </a>
       </div>
       <div class="">
@@ -328,7 +328,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <a
           href="#"
           class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
-          How Trump's Mistakes Became Biden's Big Breaks
+          How Trumps Mistakes Became Bidens Big Breaks
         </a>
       </div>
       <div class="">
@@ -341,7 +341,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <a
           href="#"
           class="text-md my-2 inline-block font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-indigo-600">
-          Survey: Many Americans 'Dissatisfied' With U.S.
+          Survey: Many Americans Dissatisfied With U.S.
         </a>
       </div>
       <div class="">
