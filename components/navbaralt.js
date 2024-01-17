@@ -10,6 +10,7 @@ import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 import SearchInput from "./ui/search";
+import { img1 } from "./IMG.png";
 
 export default function NavbarAlt(props) {
   const menu = [
@@ -85,7 +86,7 @@ export default function NavbarAlt(props) {
                   <Link href="/" className="w-28 dark:hidden">
                     {props.logo ? (
                       <Image
-                        src={urlForImage(props.logo)}
+                        src={IMG}
                         alt="Logo"
                         priority={true}
                         sizes="(max-width: 640px) 100vw, 200px"
@@ -99,7 +100,7 @@ export default function NavbarAlt(props) {
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
                       <Image
-                        src={urlForImage(props.logoalt)}
+                        src={IMG}
                         alt="Logo"
                         priority={true}
                         sizes="(max-width: 640px) 100vw, 200px"
@@ -112,7 +113,7 @@ export default function NavbarAlt(props) {
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none dark:text-gray-300 lg:hidden ">
+                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none lg:hidden dark:text-gray-300 ">
                     <svg
                       className="h-6 w-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
