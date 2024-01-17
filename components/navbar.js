@@ -9,7 +9,6 @@ import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
-// import { img1 } from "/img/img.png";
 
 export default function Navbar(props) {
   const leftmenu = [
@@ -78,34 +77,34 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-[18rem] dark:hidden">
-                    {/* {props.logo ? ( */}
-                    <Image
-                      {...urlForImage(props.logo)}
-                      src="/img/img.png"
-                      alt="Logo"
-                      priority={true}
-                      width={500}
-                      height={100}
-                    />
-                    {/* ) : (
-                      <span className="block text-center">Sta</span>
-                    )} */}
+                  {props.logo ? (
+                      <Image
+                        {...urlForImage(props.logo)}
+                        alt="Logo"
+                        priority={true}
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <span className="block text-center">
+                        The Business Masters
+                      </span>
+                    )}
                   </Link>
                   <Link
                     href="/"
                     className="hidden w-[18rem] dark:block">
-                    {/* {props.logoalt ? ( */}
-                    <Image
-                      {...urlForImage(props.logoalt)}
-                      src="/img/img.png"
-                      alt="Logo"
-                      priority={true}
-                      width={500}
-                      height={100}
-                    />
-                    {/* ) : (
-                      <span className="block text-center">St</span>
-                    )} */}
+                    {props.logo ? (
+                      <Image
+                        {...urlForImage(props.logo)}
+                        alt="Logo"
+                        priority={true}
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <span className="block text-center">
+                         The Business Masters
+                      </span>
+                    )}
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
