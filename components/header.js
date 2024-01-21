@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   MobileNav,
@@ -8,10 +8,10 @@ import {
   Card
 } from "@material-tailwind/react";
 
-function header() {
-  const [openNav, setOpenNav] = React.useState(false);
+function Header() {
+  const [openNav, setOpenNav] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
@@ -202,7 +202,7 @@ function header() {
         </div>
 
         <h2 className="max-w-prose overflow-hidden text-center md:text-left">
-          This is the "TBM" Advertisement template which needs to be
+          This is the TBM Advertisement template which needs to be
           activated through the admin portal. It can be used to
           attract the attention of the user.
         </h2>
@@ -222,4 +222,4 @@ function header() {
     </div>
   );
 }
-export default header;
+export default Header;
