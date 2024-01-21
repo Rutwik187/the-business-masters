@@ -12,18 +12,18 @@ import { myLoader } from "@/utils/all";
 
 export default function Navbar(props) {
   const leftmenu = [
-    {
-      label: "Home",
-      href: "/"
-    },
-    {
-      label: "About",
-      href: "/about"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
-    }
+    // {
+    //   label: "Home",
+    //   href: "/"
+    // },
+    // {
+    //   label: "About",
+    //   href: "/about"
+    // },
+    // {
+    //   label: "Contact",
+    //   href: "/contact"
+    // }
   ];
 
   const rightmenu = [
@@ -47,13 +47,13 @@ export default function Navbar(props) {
   const mobilemenu = [...leftmenu, ...rightmenu];
 
   return (
-    <Container>
+    <Container className="hidden">
       <nav>
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
+              <div className=" flex hidden flex-wrap justify-between md:flex-nowrap md:gap-10">
+                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-row md:justify-start">
                   {leftmenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
                       {item.children && item.children.length > 0 ? (
@@ -64,12 +64,20 @@ export default function Navbar(props) {
                         />
                       ) : (
                         <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-lg font-medium text-gray-600 hover:text-red-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
+                          href="/"
+                          className="w-[18rem] dark:hidden">
+                          {props.logo ? (
+                            <Image
+                              {...urlForImage(props.logo)}
+                              alt="Logo"
+                              priority={true}
+                              sizes="(max-width: 640px) 100vw, 200px"
+                            />
+                          ) : (
+                            <span className="block text-center">
+                              The Business Masters
+                            </span>
+                          )}
                         </Link>
                       )}
                     </Fragment>
@@ -77,7 +85,7 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-[18rem] dark:hidden">
-                  {props.logo ? (
+                    {props.logo ? (
                       <Image
                         {...urlForImage(props.logo)}
                         alt="Logo"
@@ -102,7 +110,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                         The Business Masters
+                        The Business Masters
                       </span>
                     )}
                   </Link>

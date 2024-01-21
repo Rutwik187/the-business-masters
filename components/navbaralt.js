@@ -76,12 +76,12 @@ export default function NavbarAlt(props) {
   ];
 
   return (
-    <Container className="!py-0">
+    <Container className="hidden !py-0">
       <nav className="my-4">
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:gap-10 lg:flex-nowrap">
+              <div className="flex hidden flex-wrap justify-between md:gap-10 lg:flex-nowrap">
                 <div className="flex w-full items-center justify-between lg:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
                     {props.logo ? (

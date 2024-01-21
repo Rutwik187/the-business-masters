@@ -7,10 +7,12 @@ import VerticalCards from "@/components/verticalCards";
 import CoverStories from "@/components/magazineList";
 import Mastertalks from "@/components/magazineList2";
 import BusBulletins from "@/components/BusBulletins";
+import Header from "@/components/header";
 
 export default function Post({ posts }) {
   return (
     <>
+      <Header />
       <MagazineCarousel />
       <VerticalCards />
       <CoverStories />
