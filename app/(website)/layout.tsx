@@ -2,6 +2,7 @@ import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 async function sharedMetaData(params) {
   const settings = await getSettings();
@@ -10,9 +11,7 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
+      default: settings?.title || "The Business Masters",
       template: "%s | Stablo"
     },
     description:
@@ -52,6 +51,7 @@ export default async function Layout({ children, params }) {
   return (
     <>
       <Navbar {...settings} />
+      {/* <Header {...settings} /> */}
 
       <div>{children}</div>
 
